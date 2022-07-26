@@ -2,7 +2,7 @@
 
 function promptYesOrNo() {
 	while true; do
-		read -p "$1 (y/n)" response
+		read -p "$1 (y/n) " response
 
 		case $response in 
 			[yY] ) return 0;;
@@ -13,9 +13,18 @@ done
 }
 
 function trySymlinkFile() {
-	if [ -e $2 ] || [ -L $2 ]
+	if [ -L $2 ] 
 	then
 		echo "Skipping, file $2 is already linked."
+	elif [ -f $2 ]
+	then
+		if promptYesOrNo "$2 already exists. would you like to overwrite it with a symlink?"
+		then
+			ln -sf $1 $2
+			echo "Linked file $2."
+		else
+			echo "Skipping, file $2."
+		fi
 	else
 		ln -s $1 $2
 		echo "Linked file $2."
@@ -27,6 +36,7 @@ DOTFILES_BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 dotFiles=(
 	".zshrc"
 	".zprofile"
+	".gitconfig"
 	".ssh/config"
 )
 

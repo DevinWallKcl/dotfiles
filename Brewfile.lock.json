@@ -5,16 +5,16 @@
         "revision": "8ec900f210c925f4b4731b0f359b0808ca132285"
       },
       "homebrew/cask": {
-        "revision": "bc335c57232cd5a1fcc63f99a6c4fdc0c515a807"
+        "revision": "28513b88d4c3cd93966e964bb0b2335d2b3fe3b7"
       },
       "homebrew/cask-versions": {
-        "revision": "4c64b9d01f604d24f3a1a31ca3124b7653bfb3d6"
+        "revision": "c3f1fc4d0643e83baacfea2eea9d7f37330d004c"
       },
       "homebrew/core": {
-        "revision": "5d03ae45d636bd31e134050234c16886dabd19fd"
+        "revision": "820ca539c90927758ee2a6002a428f8a6bf9be9d"
       },
       "aws/tap": {
-        "revision": "54882566b81fc9f97f3df1672587dbf20ba672f1"
+        "revision": "bb07ee2ab021c410a1c76a7511ad0182e709e30e"
       }
     },
     "brew": {
@@ -283,6 +283,12 @@
         "options": {
           "full_name": "iterm2"
         }
+      },
+      "p4v": {
+        "version": "2022.2,2304646",
+        "options": {
+          "full_name": "p4v"
+        }
       }
     }
   },
@@ -291,7 +297,7 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.5.6",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "5d03ae45d636bd31e134050234c16886dabd19fd",
+        "Homebrew/homebrew-core": "820ca539c90927758ee2a6002a428f8a6bf9be9d",
         "CLT": "13.0.0.0.1.1627064638",
         "Xcode": "13.4.1",
         "macOS": "12.3"
